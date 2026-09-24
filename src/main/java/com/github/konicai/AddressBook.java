@@ -1,5 +1,10 @@
 package com.github.konicai;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringJoiner;
@@ -9,13 +14,27 @@ import java.util.StringJoiner;
  * Zane Labonte-Hagar
  * 101239002
  */
-public final class AddressBook {
+@Entity
+public class AddressBook {
 
+    @Id
+    @GeneratedValue
+    private Long id;
+
+    @OneToMany
     private List<BuddyInfo> info;
 
     /// Default constructor for JPA only.
-    public AddressBook() {
+    protected AddressBook() {
 
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public AddressBook(List<BuddyInfo> info) {
