@@ -15,6 +15,23 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <!-- EclipseLink implementation of JPA -->
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.jpa</artifactId>
+            <version>4.0.2</version>
+        </dependency>
+
+        <dependency>
+            <!-- JDBC driver for sqlite -->
+            <groupId>org.xerial</groupId>
+            <artifactId>sqlite-jdbc</artifactId>
+            <version>3.41.2.2</version>
+        </dependency>
+
+
+        <!-- Test dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
