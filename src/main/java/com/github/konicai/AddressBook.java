@@ -11,18 +11,27 @@ import java.util.StringJoiner;
  */
 public final class AddressBook {
 
-    private final List<BuddyInfo> info;
+    private List<BuddyInfo> info;
+
+    /// Default constructor for JPA only.
+    public AddressBook() {
+
+    }
 
     public AddressBook(List<BuddyInfo> info) {
         this.info = new ArrayList<>(info);
     }
 
-    public void addInfo(BuddyInfo info) {
+    public void addInfoEntry(BuddyInfo info) {
         this.info.add(info);
     }
 
-    public List<BuddyInfo> info() {
+    public List<BuddyInfo> getInfo() {
         return info;
+    }
+
+    public void setInfo(List<BuddyInfo> info) {
+        this.info = info;
     }
 
     @Override

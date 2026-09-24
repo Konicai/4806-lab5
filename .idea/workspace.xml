@@ -1,5 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab2: convert BuddyInfo from a record to a class">
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/konicai/AddressBookTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/konicai/AddressBookTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
   <component name="ComposerSettings">
     <execution>
       <execution>
@@ -9,9 +22,21 @@
       </execution>
     </execution>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
 }</component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lab2: add dependencies" />
+    <MESSAGE value="lab2: add persistence.xml with AddressBook and BuddyInfo class references" />
+    <MESSAGE value="lab2: convert BuddyInfo from a record to a class" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab2: convert BuddyInfo from a record to a class" />
+  </component>
 </project>

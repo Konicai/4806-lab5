@@ -19,7 +19,7 @@ class AddressBookTest {
     void testEmpty() {
         AddressBook book = new AddressBook(Collections.emptyList());
 
-        assertEquals(List.of(), book.info());
+        assertEquals(List.of(), book.getInfo());
 
         String expectedToString = """
                 AddressBook:""";
@@ -33,7 +33,7 @@ class AddressBookTest {
         ));
 
         List<BuddyInfo> expectedInfo = List.of(new BuddyInfo("Mark", "123-456"));
-        assertEquals(expectedInfo, book.info());
+        assertEquals(expectedInfo, book.getInfo());
 
         String expectedToString = """
                 AddressBook:
@@ -51,7 +51,7 @@ class AddressBookTest {
         List<BuddyInfo> expectedInfo = List.of(
                 new BuddyInfo("Mark", "123-456"),
                 new BuddyInfo("Adrian", "123456789"));
-        assertEquals(expectedInfo, book.info());
+        assertEquals(expectedInfo, book.getInfo());
 
         String expectedToString = """
                 AddressBook:
@@ -67,9 +67,9 @@ class AddressBookTest {
         BuddyInfo info = new BuddyInfo("Zane", "1234");
         BuddyInfo info2 = new BuddyInfo("Zane", "1234");
 
-        book.addInfo(info);
+        book.addInfoEntry(info);
 
-        assertEquals(info2, book.info().getFirst());
-        assertEquals(1, book.info().size());
+        assertEquals(info2, book.getInfo().getFirst());
+        assertEquals(1, book.getInfo().size());
     }
 }
