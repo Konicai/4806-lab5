@@ -1,5 +1,6 @@
 package com.github.konicai;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -21,7 +22,9 @@ public class AddressBook {
     @GeneratedValue
     private Long id;
 
-    @OneToMany
+    // Cascade all operations so that we can persist BuddyInfos that are in this list that have not been individually
+    // persisted yet.
+    @OneToMany(cascade = CascadeType.ALL)
     private List<BuddyInfo> info;
 
     /// Default constructor for JPA only.

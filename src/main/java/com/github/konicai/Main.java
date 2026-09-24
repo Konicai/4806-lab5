@@ -69,6 +69,9 @@ public class Main {
             book.addInfoEntry(info1);
             book.addInfoEntry(info2);
 
+            BuddyInfo newInfo3 = new BuddyInfo("Bradley", "6789");
+            book.addInfoEntry(newInfo3);
+
             // AddressBook persistence test
             System.out.println("AddressBook persistence test");
             try (EntityManager em = emf.createEntityManager()) {
@@ -76,7 +79,9 @@ public class Main {
                 EntityTransaction tx = em.getTransaction();
                 tx.begin();
 
-                em.persist(book);
+                // We must use merge here since AddressBook#info has CascadeType.ALL
+                // and info1 and info2 have already been persisted to the database.
+                em.merge(book);
 
                 tx.commit();
 
