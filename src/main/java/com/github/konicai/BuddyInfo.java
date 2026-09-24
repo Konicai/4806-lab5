@@ -1,5 +1,9 @@
 package com.github.konicai;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.util.Objects;
 
 /**
@@ -7,19 +11,32 @@ import java.util.Objects;
  * Zane Labonte-Hagar
  * 101239002
  */
-public final class BuddyInfo {
+@Entity
+public class BuddyInfo {
+
+    @Id
+    @GeneratedValue
+    private Long id;
 
     private String name;
     private String phoneNumber;
 
     /// Default constructor for JPA only.
-    public BuddyInfo() {
+    protected BuddyInfo() {
 
     }
 
     public BuddyInfo(String name, String phoneNumber) {
         this.name = name;
         this.phoneNumber = phoneNumber;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -44,16 +61,13 @@ public final class BuddyInfo {
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (obj == this) return true;
-        if (obj == null || obj.getClass() != this.getClass()) return false;
-        var that = (BuddyInfo) obj;
-        return Objects.equals(this.name, that.name) &&
-                Objects.equals(this.phoneNumber, that.phoneNumber);
+    public boolean equals(Object o) {
+        if (!(o instanceof BuddyInfo buddyInfo)) return false;
+        return Objects.equals(id, buddyInfo.id) && Objects.equals(name, buddyInfo.name) && Objects.equals(phoneNumber, buddyInfo.phoneNumber);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, phoneNumber);
+        return Objects.hash(id, name, phoneNumber);
     }
 }
