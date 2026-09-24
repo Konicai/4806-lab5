@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab2: setup AddressBook for JPA usage">
+    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab2: add id and annotations to BuddyInfo">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/BuddyInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/BuddyInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,14 +23,46 @@
       </execution>
     </execution>
   </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="5daa0105-cb0f-4599-a42b-27ff284eb22e" value="" />
+    </colors>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "editor.preferences.appearance"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite"
+    ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.konicai.Main" />
+      <module name="1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.konicai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="TaskManager">
     <servers />
   </component>
@@ -38,7 +71,8 @@
     <MESSAGE value="lab2: add persistence.xml with AddressBook and BuddyInfo class references" />
     <MESSAGE value="lab2: convert BuddyInfo from a record to a class" />
     <MESSAGE value="lab2: setup AddressBook for JPA usage" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab2: setup AddressBook for JPA usage" />
+    <MESSAGE value="lab2: add id and annotations to BuddyInfo" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab2: add id and annotations to BuddyInfo" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

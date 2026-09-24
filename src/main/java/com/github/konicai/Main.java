@@ -1,5 +1,11 @@
 package com.github.konicai;
 
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.EntityManagerFactory;
+import jakarta.persistence.EntityTransaction;
+import jakarta.persistence.Persistence;
+import jakarta.persistence.Query;
+
 import java.util.List;
 
 /**
@@ -11,14 +17,34 @@ public class Main {
 
     public static void main(String[] args) {
 
-        BuddyInfo info1 = new BuddyInfo("Charles", "111-111-1111");
-        BuddyInfo info2 = new BuddyInfo("Frank", "222-222-2222");
-        BuddyInfo info3 = new BuddyInfo("Herbet", "333-333-3333");
+        // BuddyInfo persistence test
 
-        List<BuddyInfo> infos = List.of(info1, info2, info3);
+        BuddyInfo info1 = new BuddyInfo("Zane", "1234");
+        BuddyInfo info2 = new BuddyInfo("Ben", "555-555-5555");
 
-        AddressBook addressBook = new AddressBook(infos);
+        try (EntityManagerFactory emf = Persistence.createEntityManagerFactory("jpa-test")) {
 
-        System.out.println(addressBook.toString());
+            try (EntityManager em = emf.createEntityManager()) {
+
+                // Persist the two BuddyInfos
+                EntityTransaction tx = em.getTransaction();
+                tx.begin();
+
+                em.persist(info1);
+                em.persist(info2);
+
+                tx.commit();
+
+                // Query for all BuddyInfo records and print them
+                Query q = em.createQuery("SELECT b from BuddyInfo b");
+
+                List<BuddyInfo> results = q.getResultList();
+
+                System.out.println("BuddyInfos:");
+                for (BuddyInfo info : results) {
+                    System.out.println(info.toString());
+                }
+            }
+        }
     }
 }
