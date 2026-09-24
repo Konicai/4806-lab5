@@ -14,15 +14,15 @@ class BuddyInfoTest {
     @Test
     void testBasic() {
         BuddyInfo info = new BuddyInfo("Ben", "111-1");
-        assertEquals("Ben", info.name());
-        assertEquals("111-1", info.phoneNumber());
+        assertEquals("Ben", info.getName());
+        assertEquals("111-1", info.getPhoneNumber());
     }
 
     @Test
     void testNoPhoneNumber() {
         BuddyInfo info = new BuddyInfo("James", "");
-        assertEquals("James", info.name());
-        assertEquals("", info.phoneNumber());
+        assertEquals("James", info.getName());
+        assertEquals("", info.getPhoneNumber());
     }
 
     @Test
