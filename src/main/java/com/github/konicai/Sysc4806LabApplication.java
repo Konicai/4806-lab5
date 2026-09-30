@@ -1,5 +1,7 @@
 package com.github.konicai;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,26 +17,28 @@ import java.util.ArrayList;
 @SpringBootApplication
 public class Sysc4806LabApplication {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(Sysc4806LabApplication.class);
+
     private static void printAllAddressBook(AddressBookRepository addressBookRepo) {
         // Query for all BuddyInfo records and print them
         Iterable<AddressBook> results = addressBookRepo.findAll();
 
-        System.out.println("All AddressBook:");
+        LOGGER.info("All AddressBook:");
         for (AddressBook book : results) {
-            System.out.println(book.toString());
+            LOGGER.info(book.toString());
         }
-        System.out.println();
+        LOGGER.info("");
     }
 
     private static void printAllBuddyInfo(BuddyInfoRepository buddyInfoRepository) {
         // Query for all BuddyInfo records and print them
         Iterable<BuddyInfo> results = buddyInfoRepository.findAll();
 
-        System.out.println("All BuddyInfo:");
+        LOGGER.info("All BuddyInfo:");
         for (BuddyInfo info : results) {
-            System.out.println(info.toString());
+            LOGGER.info(info.toString());
         }
-        System.out.println();
+        LOGGER.info("");
     }
 
     public static void main(String[] args) {
@@ -52,13 +56,13 @@ public class Sysc4806LabApplication {
             BuddyInfo info2 = new BuddyInfo("Ben", "555-555-5555");
 
             // BuddyInfo persistence test
-            System.out.println("BuddyInfo persistence test");
+            LOGGER.info("BuddyInfo persistence test");
             buddyInfoRepo.save(info1);
             buddyInfoRepo.save(info2);
             printAllBuddyInfo(buddyInfoRepo);
 
             // AddressBook persistance test follows
-            System.out.println("AddressBook persistence test");
+            LOGGER.info("AddressBook persistence test");
 
             // Create new book
             AddressBook book = new AddressBook(new ArrayList<>());
