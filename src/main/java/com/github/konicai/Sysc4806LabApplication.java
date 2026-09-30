@@ -2,8 +2,10 @@ package com.github.konicai;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
+import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 
 import java.util.List;
 
@@ -95,5 +97,12 @@ public class Sysc4806LabApplication {
             }
         }
         */
+    }
+
+    @Bean
+    public CommandLineRunner demo(AddressBookRepository addressBookRepo, BuddyInfoRepository buddyInfoRepo) {
+        return (args) -> {
+            System.out.println("hello world");
+        };
     }
 }
