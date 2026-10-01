@@ -1,5 +1,6 @@
 package com.github.konicai;
 
+import jakarta.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -50,35 +51,44 @@ public class Sysc4806LabApplication {
 
     @Bean
     public CommandLineRunner demo(AddressBookRepository addressBookRepo, BuddyInfoRepository buddyInfoRepo) {
-        return (args) -> {
+        return new CommandLineRunner() {
 
-            BuddyInfo info1 = new BuddyInfo("Zane", "1234");
-            BuddyInfo info2 = new BuddyInfo("Ben", "555-555-5555");
+            /// This @Transactional annotation is required so that the following is run under one transaction.
+            /// This allows `info1` and `info2` to be added to `book` after they have already been persisted themselves.
+            /// Without this transaction, they would become detached entities after being saved,
+            /// and attempting to add them to `book` and then persisting `book` would be rejected.
+            @Transactional
+            @Override
+            public void run(String... args) {
 
-            // BuddyInfo persistence test
-            LOGGER.info("BuddyInfo persistence test");
-            buddyInfoRepo.save(info1);
-            buddyInfoRepo.save(info2);
-            printAllBuddyInfo(buddyInfoRepo);
+                BuddyInfo info1 = new BuddyInfo("Zane", "1234");
+                BuddyInfo info2 = new BuddyInfo("Ben", "555-555-5555");
 
-            // AddressBook persistance test follows
-            LOGGER.info("AddressBook persistence test");
+                // BuddyInfo persistence test
+                LOGGER.info("BuddyInfo persistence test");
+                buddyInfoRepo.save(info1);
+                buddyInfoRepo.save(info2);
+                printAllBuddyInfo(buddyInfoRepo);
 
-            // Create new book
-            AddressBook book = new AddressBook(new ArrayList<>());
-            // Add BuddyInfos that already exist in the BuddyInfoRepository
-            book.addInfoEntry(info1);
-            book.addInfoEntry(info2);
+                // AddressBook persistance test follows
+                LOGGER.info("AddressBook persistence test");
 
-            // Add BuddyInfo that does not yet exist in the BuddyInfoRepository
-            BuddyInfo newInfo3 = new BuddyInfo("Bradley", "6789");
-            book.addInfoEntry(newInfo3);
+                // Create new book
+                AddressBook book = new AddressBook(new ArrayList<>());
+                // Add BuddyInfos that already exist in the BuddyInfoRepository
+                book.addInfoEntry(info1);
+                book.addInfoEntry(info2);
 
-            // Save the AddressBook
-            addressBookRepo.save(book);
+                // Add BuddyInfo that does not yet exist in the BuddyInfoRepository
+                BuddyInfo newInfo3 = new BuddyInfo("Bradley", "6789");
+                book.addInfoEntry(newInfo3);
 
-            printAllBuddyInfo(buddyInfoRepo);
-            printAllAddressBook(addressBookRepo);
+                // Save the AddressBook
+                addressBookRepo.save(book);
+
+                printAllBuddyInfo(buddyInfoRepo);
+                printAllAddressBook(addressBookRepo);
+            }
         };
     }
 }
