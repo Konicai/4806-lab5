@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab3: add log to README.md">
+    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab4: add Spring Data REST for automatically creating REST Controllers for Repositories">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
@@ -179,7 +179,8 @@
     <MESSAGE value="lab3: fix demo code rejecting detached info1 and info2" />
     <MESSAGE value="lab3: disable debugging in application.properties" />
     <MESSAGE value="lab3: add log to README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab3: add log to README.md" />
+    <MESSAGE value="lab4: add Spring Data REST for automatically creating REST Controllers for Repositories" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab4: add Spring Data REST for automatically creating REST Controllers for Repositories" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
