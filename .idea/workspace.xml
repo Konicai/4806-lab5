@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab2: persist the AddressBook with a BuddyInfo that has not been persisted yet using cascading operations" />
+    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab3: add log to README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -25,12 +28,17 @@
     </colors>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="6b6bf475341891717f30f734c44523f3c5cf0197" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 4,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3JmpGTKF1CWdSgUsYAwKfCZlAl5" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -39,13 +47,22 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "JUnit.AddressBookTest.executor": "Run",
+    "Maven.sysc4806-lab3 [org.springframework.boot:spring-boot-maven-plugin:4.1.1:run].executor": "Run",
+    "Maven.sysc4806-lab3 [test].executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Spring Boot.Sysc4806LabApplication.executor": "Run",
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/zlabo/Documents/classes/sysc4806/lab4",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "editor.preferences.appearance"
   },
@@ -55,7 +72,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.AddressBookTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.konicai.Main" />
       <module name="1" />
@@ -69,8 +86,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Sysc4806LabApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.github.konicai.Sysc4806LabApplication" />
+      <module name="sysc4806-lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.konicai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AddressBookTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="sysc4806-lab3" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.konicai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.konicai" />
+      <option name="MAIN_CLASS_NAME" value="com.github.konicai.AddressBookTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sysc4806LabApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="sysc4806-lab3" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.konicai.Sysc4806LabApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.konicai.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AddressBookTest" />
+        <item itemvalue="Spring Boot.Sysc4806LabApplication" />
+        <item itemvalue="Application.Sysc4806LabApplication" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
@@ -95,6 +156,17 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lab2: add dependencies" />
     <MESSAGE value="lab2: add persistence.xml with AddressBook and BuddyInfo class references" />
@@ -104,7 +176,10 @@
     <MESSAGE value="lab2: add test for persisting BuddyInfo to Main" />
     <MESSAGE value="lab2: persisting AddressBook" />
     <MESSAGE value="lab2: persist the AddressBook with a BuddyInfo that has not been persisted yet using cascading operations" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab2: persist the AddressBook with a BuddyInfo that has not been persisted yet using cascading operations" />
+    <MESSAGE value="lab3: fix demo code rejecting detached info1 and info2" />
+    <MESSAGE value="lab3: disable debugging in application.properties" />
+    <MESSAGE value="lab3: add log to README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab3: add log to README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

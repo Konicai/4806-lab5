@@ -16,6 +16,7 @@
 
     <dependencies>
 
+        <!-- SpringBoot JPA and H2 dependencies -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-h2console</artifactId>
@@ -33,6 +34,25 @@
             <version>2.5.250</version>
         </dependency>
 
+        <!-- Spring Data REST automatically creates REST controllers for our Repositories -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-rest</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+
+        <!-- Dependencies for REST service and serving web content-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>4.1.1</version>
+        </dependency>
+
         <!-- Test dependencies -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -47,5 +67,16 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <plugins>
+            <!-- Adds spring-boot:run goal -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>4.1.1</version>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
