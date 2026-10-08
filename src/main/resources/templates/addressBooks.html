@@ -8,7 +8,6 @@
 <body>
 
 <h1>Address Books</h1>
-
 <div th:each="book : ${books}" >
 
     <!-- Header with AddressBook ID -->
@@ -37,6 +36,28 @@
     </table>
 
 </div>
+
+<h1>All Info Entries</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Phone Number</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="info : ${infoEntries}">
+        <td th:text="${info.getId()}">MyID</td>
+        <td th:text="${info.getName()}">MyName</td>
+        <td th:text="${info.getPhoneNumber()}">MyPhoneNumber</td>
+    </tr>
+    <tr th:if="${#lists.isEmpty(infoEntries)}">
+        <td colspan="3">No entries yet.</td>
+    </tr>
+    </tbody>
+</table>
 
 </body>
 </html>
