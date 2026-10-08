@@ -4,9 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab4: add Spring Data REST for automatically creating REST Controllers for Repositories">
+    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab4: improve version declaration in pom.xml">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBookWebController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/addressBooks.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addressBooks.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/BuddyInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/BuddyInfoRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,14 @@
     <colors>
       <entry key="66849808-f75f-4c47-8ea4-00741065d245" value="" />
     </colors>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="HTML File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -47,6 +60,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
+    "DefaultHtmlFileTemplate": "HTML File",
     "JUnit.AddressBookTest.executor": "Run",
     "Maven.sysc4806-lab3 [org.springframework.boot:spring-boot-maven-plugin:4.1.1:run].executor": "Run",
     "Maven.sysc4806-lab3 [test].executor": "Run",
@@ -72,7 +86,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.AddressBookTest">
+  <component name="RunManager" selected="Spring Boot.Sysc4806LabApplication">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.github.konicai.Main" />
       <module name="1" />
@@ -129,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AddressBookTest" />
         <item itemvalue="Spring Boot.Sysc4806LabApplication" />
+        <item itemvalue="JUnit.AddressBookTest" />
         <item itemvalue="Application.Sysc4806LabApplication" />
         <item itemvalue="Application.Main" />
       </list>
@@ -180,7 +194,8 @@
     <MESSAGE value="lab3: disable debugging in application.properties" />
     <MESSAGE value="lab3: add log to README.md" />
     <MESSAGE value="lab4: add Spring Data REST for automatically creating REST Controllers for Repositories" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab4: add Spring Data REST for automatically creating REST Controllers for Repositories" />
+    <MESSAGE value="lab4: improve version declaration in pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab4: improve version declaration in pom.xml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

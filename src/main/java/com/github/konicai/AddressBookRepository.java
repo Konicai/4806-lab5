@@ -1,7 +1,7 @@
 package com.github.konicai;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 
-public interface AddressBookRepository extends CrudRepository<AddressBook, Long> {
+public interface AddressBookRepository extends ListCrudRepository<AddressBook, Long> {
 
 }

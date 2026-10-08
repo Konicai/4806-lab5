@@ -1,7 +1,7 @@
 package com.github.konicai;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 
-public interface BuddyInfoRepository extends CrudRepository<BuddyInfo, Long> {
+public interface BuddyInfoRepository extends ListCrudRepository<BuddyInfo, Long> {
 
 }
