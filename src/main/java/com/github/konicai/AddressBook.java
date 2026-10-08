@@ -29,7 +29,7 @@ public class AddressBook {
 
     /// Default constructor for JPA only.
     protected AddressBook() {
-
+        this.info = new ArrayList<>();
     }
 
     public Long getId() {

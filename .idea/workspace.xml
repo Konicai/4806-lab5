@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab4: improve version declaration in pom.xml">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBookWebController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/addressBooks.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/addressBooks.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/greeting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/BuddyInfoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/BuddyInfoRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab4: add AddressBookWebController&#10;&#10;- AddressBookWebController uses the addressBooks.html template to serve all books and their info entries.&#10;- Convert AddressBookRepository and BuddyInfoRepository to a ListCrudRepository for easier usage.&#10;- Added addressBooks.html Thymeleaf template and associated addressBooks.css" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -193,9 +185,12 @@
     <MESSAGE value="lab3: fix demo code rejecting detached info1 and info2" />
     <MESSAGE value="lab3: disable debugging in application.properties" />
     <MESSAGE value="lab3: add log to README.md" />
-    <MESSAGE value="lab4: add Spring Data REST for automatically creating REST Controllers for Repositories" />
+    <MESSAGE value="lab4: add more spring dependencies&#10;- add Spring Data REST for automatically creating REST Controllers for Repositories&#10;- add springboot webmvc dependency&#10;- add springboot thymeleaf dependency" />
     <MESSAGE value="lab4: improve version declaration in pom.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab4: improve version declaration in pom.xml" />
+    <MESSAGE value="lab4: add AddressBookWebController&#10;&#10;- AddressBookWebController uses the addressBooks.html template to serve all books and their info entries.&#10;- Convert AddressBookRepository and BuddyInfoRepository to a ListCrudRepository for easier usage.&#10;- Added addressBooks.html Thymeleaf template and associated addressBooks.css" />
+    <MESSAGE value="lab4: add more spring dependencies&#10;- add Spring Data REST for automatically creating REST Controllers for Repositories&#10;- add springboot-thymeleaf dependency" />
+    <MESSAGE value="lab4: add more spring dependencies&#10;- add Spring Data REST for automatically creating REST Controllers for Repositories&#10;- add springboot webmvc dependency&#10;- add springboot thymeleaf dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab4: add more spring dependencies&#10;- add Spring Data REST for automatically creating REST Controllers for Repositories&#10;- add springboot webmvc dependency&#10;- add springboot thymeleaf dependency" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

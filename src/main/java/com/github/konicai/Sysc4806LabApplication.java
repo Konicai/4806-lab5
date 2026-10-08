@@ -74,7 +74,7 @@ public class Sysc4806LabApplication {
                 LOGGER.info("AddressBook persistence test");
 
                 // Create new book
-                AddressBook book = new AddressBook(new ArrayList<>());
+                AddressBook book = new AddressBook();
                 // Add BuddyInfos that already exist in the BuddyInfoRepository
                 book.addInfoEntry(info1);
                 book.addInfoEntry(info2);
@@ -88,6 +88,10 @@ public class Sysc4806LabApplication {
 
                 printAllBuddyInfo(buddyInfoRepo);
                 printAllAddressBook(addressBookRepo);
+
+                // Lab4: Add an empty book
+                AddressBook emptyBook = new AddressBook();
+                addressBookRepo.save(emptyBook);
             }
         };
     }
