@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab4: also display all BuddyInfo objects on web page">
-      <change afterPath="$PROJECT_DIR$/examples/demo_web_page.png" afterDir="false" />
+    <list default="true" id="80d7ff83-7702-4f2a-b193-79272c6a1306" name="Changes" comment="lab4: add report to README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/konicai/AddressBook.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +42,14 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="customMavenHome" value="C:\Users\zlabo\tools\apache-maven-3.9.16" />
+        <option name="mavenHomeTypeForPersistence" value="CUSTOM" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4,
   &quot;fromUser&quot;: false
@@ -77,7 +82,7 @@
     "node.js.detected.package.jshint": "true",
     "node.js.selected.package.jshint": "",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "editor.preferences.appearance"
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   },
   "keyToStringList": {
     "DatabaseDriversLRU": [
@@ -204,7 +209,9 @@
     <MESSAGE value="lab4: add more spring dependencies&#10;- add Spring Data REST for automatically creating REST Controllers for Repositories&#10;- add springboot webmvc dependency&#10;- add springboot thymeleaf dependency" />
     <MESSAGE value="lab4: add an empty AddressBook to the DB" />
     <MESSAGE value="lab4: also display all BuddyInfo objects on web page" />
-    <option name="LAST_COMMIT_MESSAGE" value="lab4: also display all BuddyInfo objects on web page" />
+    <MESSAGE value="lab4: make AddressBook-&gt;BuddyInfor relationship `@ManyToMany`" />
+    <MESSAGE value="lab4: add report to README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="lab4: add report to README.md" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
