@@ -75,6 +75,7 @@ public class Sysc4806LabApplication {
 
                 // Create new book
                 AddressBook book = new AddressBook();
+                book.setName("Zane's Book");
                 // Add BuddyInfos that already exist in the BuddyInfoRepository
                 book.addInfoEntry(info1);
                 book.addInfoEntry(info2);
@@ -91,6 +92,7 @@ public class Sysc4806LabApplication {
 
                 // Lab4: Add an empty book
                 AddressBook emptyBook = new AddressBook();
+                emptyBook.setName("Empty Book");
                 addressBookRepo.save(emptyBook);
             }
         };

@@ -28,8 +28,9 @@ class AddressBookTest {
 
     @Test
     void testSingle() {
-        AddressBook book = new AddressBook(List.of(
-                new BuddyInfo("Mark", "123-456")
+        AddressBook book = new AddressBook(
+                "My First Book",
+                List.of(new BuddyInfo("Mark", "123-456")
         ));
 
         List<BuddyInfo> expectedInfo = List.of(new BuddyInfo("Mark", "123-456"));
@@ -37,15 +38,18 @@ class AddressBookTest {
 
         String expectedToString = """
                 AddressBook:
+                AddressBook Name: My First Book
                 Name: Mark, Phone Number: 123-456""";
         assertEquals(expectedToString, book.toString());
     }
 
     @Test
     void testMultiple() {
-        AddressBook book = new AddressBook(List.of(
-                new BuddyInfo("Mark", "123-456"),
-                new BuddyInfo("Adrian", "123456789")
+        AddressBook book = new AddressBook(
+                "My First Book",
+                List.of(
+                        new BuddyInfo("Mark", "123-456"),
+                        new BuddyInfo("Adrian", "123456789")
         ));
 
         List<BuddyInfo> expectedInfo = List.of(
@@ -55,6 +59,7 @@ class AddressBookTest {
 
         String expectedToString = """
                 AddressBook:
+                AddressBook Name: My First Book
                 Name: Mark, Phone Number: 123-456
                 Name: Adrian, Phone Number: 123456789""";
         assertEquals(expectedToString, book.toString());

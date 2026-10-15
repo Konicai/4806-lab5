@@ -26,9 +26,12 @@ public class RestControllersTest {
         restClient.get().uri("/addressBooks")
                 .exchangeSuccessfully()
                 .expectBody()
+                .consumeWith(System.out::println)
                 .jsonPath("$._embedded.addressBooks[0]._links.self.href").isEqualTo("http://localhost/addressBooks/1")
+                .jsonPath("$._embedded.addressBooks[0].name").isEqualTo("Zane's Book")
                 .jsonPath("$._embedded.addressBooks[0]._links.info.href").isEqualTo("http://localhost/addressBooks/1/info")
                 .jsonPath("$._embedded.addressBooks[1]._links.self.href").isEqualTo("http://localhost/addressBooks/2")
+                .jsonPath("$._embedded.addressBooks[1].name").isEqualTo("Empty Book")
                 .jsonPath("$._embedded.addressBooks[1]._links.info.href").isEqualTo("http://localhost/addressBooks/2/info");
     }
 
@@ -48,6 +51,12 @@ public class RestControllersTest {
     @Test
     void testPostAddressBook() {
         URI location = createAddressBook();
+
+        restClient.get().uri(location)
+                .exchangeSuccessfully()
+                .expectBody()
+                .jsonPath("$.name").isEqualTo("TestBook");
+
         assertThat(location.toString()).matches(".*/addressBooks/\\d+");
     }
 
@@ -80,6 +89,11 @@ public class RestControllersTest {
                 .body(buddy.toString())
                 .exchangeSuccessfully();
 
+        restClient.get().uri(addressBook)
+                .exchangeSuccessfully()
+                .expectBody()
+                .jsonPath("$.name").isEqualTo("TestBook");
+
         restClient.get().uri(addressBook + "/info")
                 .exchangeSuccessfully()
                 .expectBody()
@@ -92,7 +106,8 @@ public class RestControllersTest {
         return restClient.post().uri("/addressBooks")
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaTypes.HAL_JSON)
-                .body("{}")
+                .body("""
+                        {"name": "TestBook"}""")
                 .exchangeSuccessfully()
                 .expectBody()
                 .jsonPath("$._links.info.href").exists()

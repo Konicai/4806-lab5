@@ -22,6 +22,8 @@ public class AddressBook {
     @GeneratedValue
     private Long id;
 
+    private String name;
+
     // Cascade all operations so that we can persist BuddyInfos that are in this list that have not been individually
     // persisted yet.
     @ManyToMany(cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
@@ -32,12 +34,25 @@ public class AddressBook {
         this.info = new ArrayList<>();
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public AddressBook(String name, List<BuddyInfo> info) {
+        this.name = name;
+        this.info = new ArrayList<>(info);
     }
 
     public AddressBook(List<BuddyInfo> info) {
@@ -62,6 +77,9 @@ public class AddressBook {
 
         // Header
         joiner.add("AddressBook:");
+        if (name != null) {
+            joiner.add("AddressBook Name: " + name);
+        }
 
         // Entries
         info.stream()
