@@ -2,7 +2,11 @@
 
 Student: Zane Labonte-Hagar, 101239002
 
-## Steps
+## Viewing Published Instance
+
+The deployment is available at: https://zlh-sysc4806-lab5-hyb8f6gqehaue5dj.mexicocentral-01.azurewebsites.net/
+
+## Building and Running
 
 ### 1. Start the server
 Open the project in IntelliJ IDEA and run `com.github.konicai.Sysc4806LabApplication` using an IntelliJ IDEA run configuration.
