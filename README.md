@@ -6,6 +6,10 @@ Student: Zane Labonte-Hagar, 101239002
 
 The deployment is available at: https://zlh-sysc4806-lab5-hyb8f6gqehaue5dj.mexicocentral-01.azurewebsites.net/
 
+After first boot, the following was observed:
+
+![deployed_web_page.png](examples/deployed_web_page.png)[]()
+
 ## Building and Running
 
 ### 1. Start the server
