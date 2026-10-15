@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/Konicai/4806-lab5/actions/workflows/maven.yml/badge.svg?branch=main)](https://github.com/Konicai/4806-lab5/actions/workflows/maven.yml)
+
 Student: Zane Labonte-Hagar, 101239002
 
 ## Steps
